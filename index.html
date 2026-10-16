@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>准考证信息</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;}
+body{background:#f4f4f6;color:#333;font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;font-size:14px}
+.phone-page{width:100%;max-width:450px;min-height:100vh;margin:0 auto;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.04)}
+
+.content{padding:0 20px 28px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+td,th{border:1px solid #dedde3;height:36px;padding:5px 4px;text-align:center;vertical-align:middle;font-weight:400;overflow-wrap:anywhere}
+.label{width:20%;background:#e9e7ef;color:#555;letter-spacing:1px}
+.value{background:#fff}
+
+/* 照片单元格：简单粗暴 */
+.photo-cell{
+  width:36%;
+  padding:4px;
+  background:#fff;
+  text-align:center;
+  vertical-align:middle;
+}
+.photo{
+  display:block;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border:1px solid #e0e0e0;
+}
+
+.exam-title{margin-top:20px;height:37px;display:flex;justify-content:center;align-items:center;background:#e9e7ef;border:1px solid #dedde3;font-weight:600;letter-spacing:1px}
+.schedule th{background:#fff;font-weight:400}
+.schedule td{height:36px}
+.schedule .time{width:30%}
+
+@media(max-width:360px){
+  .content{padding-left:12px;padding-right:12px}
+  td,th{font-size:12px;padding:4px 2px}
+}
+</style>
+</head>
+<body>
+<main class="phone-page">
+<section class="content" aria-label="准考证信息">
+  <table class="info-table">
+    <colgroup>
+      <col style="width:19%">
+      <col style="width:24%">
+      <col style="width:21%">
+      <col style="width:36%">
+    </colgroup>
+    <tbody>
+      <tr>
+        <td class="label">准考证号</td>
+        <td class="value" colspan="2">030110107</td>
+        <td class="photo-cell" rowspan="6">
+          <img class="photo" src="photo.jpg" alt="考生照片">
+        </td>
+      </tr>
+      <tr><td class="label">考生号</td><td class="value" colspan="2">030115102396</td></tr>
+      <tr><td class="label">姓　名</td><td class="value" colspan="2">张尧</td></tr>
+      <tr><td class="label">性　别</td><td class="value" colspan="2">男</td></tr>
+      <tr><td class="label">身份证号</td><td class="value" colspan="2">43062120061118025X</td></tr>
+      <tr><td class="label">报考科类</td><td class="value" colspan="2">高职（专科） 文史类</td></tr>
+      <tr><td class="label">考室号</td><td class="value">101</td><td class="label">座位号</td><td class="value">07</td></tr>
+      <tr><td class="label">考点名称</td><td class="value" colspan="3">湘潭市第十二中学</td></tr>
+      <tr><td class="label">考点地址</td><td class="value" colspan="3">湘潭市岳塘区湘潭大道20号</td></tr>
+      <tr><td class="label">考点备注</td><td class="value" colspan="3">&nbsp;</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exam-title">考试时间表</div>
+  <table class="schedule">
+    <colgroup><col class="time"><col><col></colgroup>
+    <thead>
+      <tr><th>日期时间</th><th>10月17日</th><th>10月18日</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>09:00-11:00</td><td>语文</td><td>外语</td></tr>
+      <tr><td>14:30-16:30</td><td>数学(文)</td><td>&nbsp;</td></tr>
+    </tbody>
+  </table>
+</section>
+</main>
+</body>
+</html>
